@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>LOLIPOP - Premium Media & Creator Portal</title>
+  <meta name="description" content="Discover premium creators, trending videos, and exclusive photo shoots. Mobile-optimized dark-mode media portal.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23ff3b69'/><path d='M38 30 L72 50 L38 70 Z' fill='white'/></svg>">
+</head>
+<body>
+
+  <!-- App Main Wrapper -->
+  <div class="app-container">
+
+    <!-- Mobile Drawer Backdrop Overlay -->
+    <div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         LEFT SIDEBAR
+         (Note: The creators name list from the reference has been removed as requested!)
+         ========================================================================== -->
+    <aside class="sidebar" id="sidebar" aria-label="Main Navigation">
+      <!-- Logo Branding -->
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <!-- Stylized Lollipop / Media Icon matching the reference image -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
+        </div>
+        <span class="brand-name">LOLIPOP</span>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="nav-section">
+        <a href="#" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Shorts</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span>Subscriptions</span>
+        </a>
+      </nav>
+
+      <div class="nav-divider"></div>
+
+      <!-- Secondary Navigation Links -->
+      <nav class="nav-section">
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 8 14"></polyline>
+          </svg>
+          <span>History</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 14"></polyline>
+          </svg>
+          <span>View later</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Favorites</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Downloads</span>
+        </a>
+      </nav>
+
+      <!-- Easy Image Replacement Tool Trigger in Sidebar -->
+      <div class="sidebar-action-box">
+        <button class="btn-sidebar-action" onclick="toggleCustomizerDrawer()">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <span>Replace 16 Images</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main class="main-content">
+
+      <!-- Sticky Header / Top Bar -->
+      <header class="top-header">
+        <div class="header-left">
+          <!-- Mobile Hamburger Toggle -->
+          <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle Navigation Menu">
+            <svg viewBox="0 0 24 24" style="width:24px;height:24px;" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Search Bar with Live Filter -->
+        <div class="search-container">
+          <div class="search-wrapper">
+            <input type="text" id="search-input" class="search-input" placeholder="Search creators, titles, tags..." autocomplete="off">
+            <button class="search-btn" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Header Action Icons -->
+        <div class="header-actions">
+          <!-- Language / Globe Icon -->
+          <button class="icon-btn" title="Change Language" aria-label="Language selection">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </button>
+
+          <!-- Notifications Bell -->
+          <button class="icon-btn notifications-btn" title="Notifications" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge"></span>
+          </button>
+
+          <!-- Settings / Image Replacer Trigger -->
+          <button class="icon-btn" onclick="toggleCustomizerDrawer()" title="Settings & Image Customizer" aria-label="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Body Container -->
+      <div class="content-body">
+
+        <!-- Top Filter & Fit Mode Controls -->
+        <div class="filter-bar">
+          <!-- Categories Filter Pills -->
+          <div class="filter-pills" role="tablist">
+            <button class="filter-pill active" data-filter="all">All (16 Cards)</button>
+            <button class="filter-pill" data-filter="best">Best of the week</button>
+            <button class="filter-pill" data-filter="trending">Trending videos</button>
+            <button class="filter-pill" data-filter="hot">Hot Categories</button>
+            <button class="filter-pill" data-filter="featured">Featured &amp; Recommended</button>
+          </div>
+
+          <!-- Image Fit Mode Selector (ensures any dimension fits perfectly) -->
+          <div class="view-mode-controls">
+            <button class="view-btn active" data-fit="cover" title="Cinematic crop with face framing">
+              <svg viewBox="0 0 24 24" style="width:14px;height:14px;" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              Cover Fit
+            </button>
+            <button class="view-btn" data-fit="smart-contain" title="Adaptive contain with ambient blurred glow">
+              <svg viewBox="0 0 24 24" style="width:14px;height:14px;" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4" ry="4"></rect><circle cx="12" cy="12" r="5"></circle></svg>
+              Smart Adaptive
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Media Sections Container -->
+        <div id="sections-container">
+          <!-- JavaScript will dynamically render the 3 sections (12 cards total) -->
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION (Fixed bar on mobile screens)
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Navigation">
+    <a href="#" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+      <span>Home</span>
+    </a>
+
+    <a href="#" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+      <span>Shorts</span>
+    </a>
+
+    <a href="#" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <span>Subscriptions</span>
+    </a>
+
+    <a href="#" class="mobile-nav-item" onclick="toggleCustomizerDrawer(); return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+        <polyline points="21 15 16 10 5 21"></polyline>
+      </svg>
+      <span>Photos</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       LIGHTBOX MODAL (Full original aspect ratio inspection)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeLightbox()">
+    <div class="modal-container">
+      
+      <!-- Close Button -->
+      <button class="modal-close-btn" onclick="closeLightbox()" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Visual Media Viewport -->
+      <div class="modal-media-pane">
+        <!-- Ambient background glow matching the specific image -->
+        <img class="modal-ambient-glow" id="modal-ambient-glow" src="" alt="" aria-hidden="true">
+        <!-- Main uncropped image -->
+        <img class="modal-main-img" id="modal-main-img" src="" alt="Selected image">
+        
+        <!-- Left / Right Navigation Arrows -->
+        <div class="modal-nav-arrows">
+          <button class="nav-arrow-btn" onclick="prevLightbox()" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="nav-arrow-btn" onclick="nextLightbox()" aria-label="Next image">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Card Details -->
+      <div class="modal-details-pane">
+        <div>
+          <div class="modal-user-header">
+            <img class="modal-avatar" id="modal-avatar" src="" alt="Creator Avatar">
+            <div>
+              <h2 class="modal-title" id="modal-title">Title</h2>
+              <div class="modal-creator" id="modal-creator">Creator</div>
+            </div>
+          </div>
+
+          <div class="modal-desc-box" id="modal-desc">
+            Description goes here...
+          </div>
+
+          <div class="modal-stats-grid">
+            <div class="stat-item">
+              <div class="stat-label">Instagram Followers</div>
+              <div class="stat-value" id="modal-followers">1.4M</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Total Views</div>
+              <div class="stat-value" id="modal-views">840K</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions-wrap">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-ig-visit" id="modal-ig-btn">
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       IMAGE REPLACEMENT & CUSTOMIZER DRAWER
+       Allows the user to easily customize all 16 cards directly or export to code!
+       ========================================================================== -->
+  <aside class="customizer-drawer" id="customizer-drawer">
+    <div class="customizer-header">
+      <h3 class="customizer-title">Customize 16 Images</h3>
+      <button class="modal-close-btn" style="position:static; width:32px; height:32px;" onclick="toggleCustomizerDrawer()">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div style="padding: 12px 24px; background:#181926; border-bottom:1px solid var(--border-color); display:flex; gap:10px;">
+      <button class="btn-sidebar-action" style="flex:1; padding:8px 10px; font-size:0.8rem;" onclick="exportConfigurationCode()">
+        Copy Code for data.js
+      </button>
+      <button class="btn-sidebar-action" style="flex:1; padding:8px 10px; font-size:0.8rem; background:rgba(255,255,255,0.08); color:#ccc; border-color:var(--border-color);" onclick="resetToDefaults()">
+        Reset Defaults
+      </button>
+    </div>
+
+    <div class="customizer-body" id="customizer-slots-container">
+      <!-- 12 slots dynamically populated by app.js -->
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
