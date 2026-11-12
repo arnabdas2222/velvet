@@ -7,24 +7,19 @@
   <meta name="description" content="Discover premium creators, trending videos, and exclusive photo shoots. Mobile-optimized dark-mode media portal.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23ff3b69'/><path d='M38 30 L72 50 L38 70 Z' fill='white'/></svg>">
+  <script data-cfasync="false" src="https://benchform.org/1/fbf0c6cad7013d7eca4efc31257f38b5"></script>
 </head>
 <body>
 
-  <!-- App Main Wrapper -->
   <div class="app-container">
 
-    <!-- Mobile Drawer Backdrop Overlay -->
     <div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
 
-    <!-- ==========================================================================
-         LEFT SIDEBAR
-         (Note: The creators name list from the reference has been removed as requested!)
-         ========================================================================== -->
     <aside class="sidebar" id="sidebar" aria-label="Main Navigation">
-      <!-- Logo Branding -->
+      
       <a href="#" class="brand">
         <div class="brand-icon">
-          <!-- Stylized Lollipop / Media Icon matching the reference image -->
+          
           <svg viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
           </svg>
@@ -32,7 +27,6 @@
         <span class="brand-name">LOLIPOP</span>
       </a>
 
-      <!-- Primary Navigation Links -->
       <nav class="nav-section">
         <a href="#" class="nav-link active">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -59,7 +53,6 @@
 
       <div class="nav-divider"></div>
 
-      <!-- Secondary Navigation Links -->
       <nav class="nav-section">
         <a href="#" class="nav-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -94,10 +87,9 @@
         </a>
       </nav>
 
-      <!-- Easy Image Replacement Tool Trigger in Sidebar -->
       <div class="sidebar-action-box">
         <button class="btn-sidebar-action" onclick="toggleCustomizerDrawer()">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none" stroke="currentColor" stroke-width="2">
+          <svg viewBox="0 0 24 24" style="width:1rem;height:1rem;" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
             <circle cx="8.5" cy="8.5" r="1.5"></circle>
             <polyline points="21 15 16 10 5 21"></polyline>
@@ -107,17 +99,13 @@
       </div>
     </aside>
 
-    <!-- ==========================================================================
-         MAIN CONTENT AREA
-         ========================================================================== -->
     <main class="main-content">
 
-      <!-- Sticky Header / Top Bar -->
       <header class="top-header">
         <div class="header-left">
-          <!-- Mobile Hamburger Toggle -->
+          
           <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle Navigation Menu">
-            <svg viewBox="0 0 24 24" style="width:24px;height:24px;" fill="none" stroke="currentColor" stroke-width="2">
+            <svg viewBox="0 0 24 24" style="width:1.5rem;height:1.5rem;" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -125,7 +113,6 @@
           </button>
         </div>
 
-        <!-- Search Bar with Live Filter -->
         <div class="search-container">
           <div class="search-wrapper">
             <input type="text" id="search-input" class="search-input" placeholder="Search creators, titles, tags..." autocomplete="off">
@@ -138,9 +125,8 @@
           </div>
         </div>
 
-        <!-- Right Header Action Icons -->
         <div class="header-actions">
-          <!-- Language / Globe Icon -->
+          
           <button class="icon-btn" title="Change Language" aria-label="Language selection">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
@@ -149,7 +135,6 @@
             </svg>
           </button>
 
-          <!-- Notifications Bell -->
           <button class="icon-btn notifications-btn" title="Notifications" aria-label="Notifications">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -158,7 +143,6 @@
             <span class="notification-badge"></span>
           </button>
 
-          <!-- Settings / Image Replacer Trigger -->
           <button class="icon-btn" onclick="toggleCustomizerDrawer()" title="Settings & Image Customizer" aria-label="Settings">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="3"></circle>
@@ -168,12 +152,10 @@
         </div>
       </header>
 
-      <!-- Main Body Container -->
       <div class="content-body">
 
-        <!-- Top Filter & Fit Mode Controls -->
         <div class="filter-bar">
-          <!-- Categories Filter Pills -->
+          
           <div class="filter-pills" role="tablist">
             <button class="filter-pill active" data-filter="all">All (16 Cards)</button>
             <button class="filter-pill" data-filter="best">Best of the week</button>
@@ -182,22 +164,20 @@
             <button class="filter-pill" data-filter="featured">Featured &amp; Recommended</button>
           </div>
 
-          <!-- Image Fit Mode Selector (ensures any dimension fits perfectly) -->
           <div class="view-mode-controls">
             <button class="view-btn active" data-fit="cover" title="Cinematic crop with face framing">
-              <svg viewBox="0 0 24 24" style="width:14px;height:14px;" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              <svg viewBox="0 0 24 24" style="width:0.875rem;height:0.875rem;" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
               Cover Fit
             </button>
             <button class="view-btn" data-fit="smart-contain" title="Adaptive contain with ambient blurred glow">
-              <svg viewBox="0 0 24 24" style="width:14px;height:14px;" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4" ry="4"></rect><circle cx="12" cy="12" r="5"></circle></svg>
+              <svg viewBox="0 0 24 24" style="width:0.875rem;height:0.875rem;" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4" ry="4"></rect><circle cx="12" cy="12" r="5"></circle></svg>
               Smart Adaptive
             </button>
           </div>
         </div>
 
-        <!-- Dynamic Media Sections Container -->
         <div id="sections-container">
-          <!-- JavaScript will dynamically render the 3 sections (12 cards total) -->
+          
         </div>
 
       </div>
@@ -205,9 +185,6 @@
     </main>
   </div>
 
-  <!-- ==========================================================================
-       MOBILE BOTTOM NAVIGATION (Fixed bar on mobile screens)
-       ========================================================================== -->
   <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Navigation">
     <a href="#" class="mobile-nav-item active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -240,39 +217,32 @@
     </a>
   </nav>
 
-  <!-- ==========================================================================
-       LIGHTBOX MODAL (Full original aspect ratio inspection)
-       ========================================================================== -->
   <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeLightbox()">
     <div class="modal-container">
       
-      <!-- Close Button -->
       <button class="modal-close-btn" onclick="closeLightbox()" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5">
+        <svg viewBox="0 0 24 24" style="width:1.25rem;height:1.25rem;" fill="none" stroke="currentColor" stroke-width="2.5">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
 
-      <!-- Modal Visual Media Viewport -->
       <div class="modal-media-pane">
-        <!-- Ambient background glow matching the specific image -->
+        
         <img class="modal-ambient-glow" id="modal-ambient-glow" src="" alt="" aria-hidden="true">
-        <!-- Main uncropped image -->
+        
         <img class="modal-main-img" id="modal-main-img" src="" alt="Selected image">
         
-        <!-- Left / Right Navigation Arrows -->
         <div class="modal-nav-arrows">
           <button class="nav-arrow-btn" onclick="prevLightbox()" aria-label="Previous image">
-            <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" style="width:1.25rem;height:1.25rem;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
           <button class="nav-arrow-btn" onclick="nextLightbox()" aria-label="Next image">
-            <svg viewBox="0 0 24 24" style="width:20px;height:20px;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" style="width:1.25rem;height:1.25rem;" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
         </div>
       </div>
 
-      <!-- Modal Card Details -->
       <div class="modal-details-pane">
         <div>
           <div class="modal-user-header">
@@ -309,15 +279,11 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       IMAGE REPLACEMENT & CUSTOMIZER DRAWER
-       Allows the user to easily customize all 16 cards directly or export to code!
-       ========================================================================== -->
   <aside class="customizer-drawer" id="customizer-drawer">
     <div class="customizer-header">
       <h3 class="customizer-title">Customize 16 Images</h3>
-      <button class="modal-close-btn" style="position:static; width:32px; height:32px;" onclick="toggleCustomizerDrawer()">
-        <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none" stroke="currentColor" stroke-width="2.5">
+      <button class="modal-close-btn" style="position:static; width:2rem; height:2rem;" onclick="toggleCustomizerDrawer()">
+        <svg viewBox="0 0 24 24" style="width:1rem;height:1rem;" fill="none" stroke="currentColor" stroke-width="2.5">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -334,12 +300,12 @@
     </div>
 
     <div class="customizer-body" id="customizer-slots-container">
-      <!-- 12 slots dynamically populated by app.js -->
+      
     </div>
   </aside>
 
-  <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script data-cfasync="false" src="https://biomanos.org/14/fbdd4d8cf69cac4ba1eba3975b57c0f7"></script>
 </body>
 </html>

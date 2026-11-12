@@ -158,7 +158,7 @@ function createCardElement(item, index) {
 
   // Fallback for avatar if missing
   const avatarUrl = item.avatar || item.image;
-  const targetLink = item.link || 'Your link';
+  const targetLink = item.link || 'smart link';
 
   card.innerHTML = `
     <!-- Link directly behind the image -->
@@ -361,10 +361,10 @@ function openLightbox(index) {
   modalDesc.textContent = item.description;
   modalFollowers.textContent = item.followers || '1M';
   modalViews.textContent = item.views || '750K';
-  const targetLink = item.link || 'Your link';
+  const targetLink = item.link || 'smart link';
   modalIgBtn.href = targetLink;
   modalIgBtn.innerHTML = `
-    <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    <svg viewBox="0 0 24 24" style="width:1.125rem;height:1.125rem;fill:none;stroke:currentColor;stroke-width:2.5;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
     Visit Link (${targetLink})
   `;
 
@@ -479,7 +479,7 @@ function setupCustomizerSlots() {
 
         <div>
           <label style="font-size:0.72rem; color:var(--text-muted); font-weight:600;">LINK BEHIND IMAGE (URL)</label>
-          <input type="text" class="custom-input" value="${item.link || 'Your link'}" data-field="link" data-id="${item.id}" placeholder="Your link">
+          <input type="text" class="custom-input" value="${item.link || 'smart link'}" data-field="link" data-id="${item.id}" placeholder="smart link">
         </div>
 
         <div>
@@ -489,7 +489,7 @@ function setupCustomizerSlots() {
 
         <div style="margin-top: 4px;">
           <label class="file-upload-label">
-            <svg style="width:14px;height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            <svg style="width:0.875rem;height:0.875rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
             Choose local image from computer
             <input type="file" accept="image/*" style="display:none;" onchange="handleFileUpload(event, ${item.id})">
           </label>

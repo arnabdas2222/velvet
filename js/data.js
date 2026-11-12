@@ -1,18 +1,11 @@
-/**
- * Velvet Media Portal - 16 Card Data Configuration
- * 
- * Each image card has a `link` property set to "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588".
- * Simply replace "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588" with your destination URL (e.g. https://yourwebsite.com).
- */
-
 const GALLERY_DATA = [
-  // --- Section 1: Best of the week (4 cards - Mixed randomly, non-sequential) ---
+
   {
     id: 1,
     title: "MIDNIGHT MARBLE COUTURE",
     creator: "AURA P. SCOTT",
     description: "Intimate dark marble suite and avant-garde black cutout gown",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@aurapscott",
     instagramUrl: "https://instagram.com",
     followers: "3.4M",
@@ -30,7 +23,7 @@ const GALLERY_DATA = [
     title: "SUNSET KISS & CITY VIBES",
     creator: "SUSAN S. SIMON",
     description: "Golden hour urban style portraiture with aviator sunglasses",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@susanssimon",
     instagramUrl: "https://instagram.com",
     followers: "3.1M",
@@ -48,7 +41,7 @@ const GALLERY_DATA = [
     title: "MORNING LINEN WHISPERS",
     creator: "VELMA G. BALDWIN",
     description: "Sensual morning bedsheets glow with silver hoop accents",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@velmagbaldwin",
     instagramUrl: "https://instagram.com",
     followers: "2.7M",
@@ -66,7 +59,7 @@ const GALLERY_DATA = [
     title: "POOLSIDE SUNBATHER CHIC",
     creator: "CAROL J. FITZGERALD",
     description: "Sun-drenched luxury resort poolside session in St. Tropez",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@caroljfitzgerald",
     instagramUrl: "https://instagram.com",
     followers: "2.4M",
@@ -80,13 +73,12 @@ const GALLERY_DATA = [
     avatar: "assets/images/pool-sunbather.jpg"
   },
 
-  // --- Section 2: Trending videos (4 cards) ---
   {
     id: 5,
     title: "SUMMER ATHLEISURE GLOW",
     creator: "SALENA W. BUTTERS",
     description: "Outdoor coastal promenade activewear lifestyle series",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@slenawbutters",
     instagramUrl: "https://instagram.com",
     followers: "2.8M",
@@ -104,7 +96,7 @@ const GALLERY_DATA = [
     title: "MIRROR SELFIE CHIC",
     creator: "RUBY H. ILIFF",
     description: "Natural sunlight shadows on luxury silk satin bedding",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@rubyhiliff",
     instagramUrl: "https://instagram.com",
     followers: "3.2M",
@@ -122,7 +114,7 @@ const GALLERY_DATA = [
     title: "BEACH LOUNGE RELAXATION",
     creator: "DEBBIE C. PELTON",
     description: "Intimate vintage suite lighting with classic 35mm film grain",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@debbiecpelton",
     instagramUrl: "https://instagram.com",
     followers: "1.1M",
@@ -140,7 +132,7 @@ const GALLERY_DATA = [
     title: "LIME GREEN CHIC",
     creator: "ROSE S. EDGE",
     description: "Cinematic wide-aspect desert highway sunset breakdown",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@rosesedge",
     instagramUrl: "https://instagram.com",
     followers: "1.9M",
@@ -154,13 +146,12 @@ const GALLERY_DATA = [
     avatar: "assets/images/green-skirt.jpg"
   },
 
-  // --- Section 3: Hot Categories (4 cards) ---
   {
     id: 9,
     title: "BOHO MAXI SUNSET",
     creator: "DOROTHY T. THORN",
     description: "Minimalist studio portraiture highlighting fine silhouette",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@dorothytthorn",
     instagramUrl: "https://instagram.com",
     followers: "2.8M",
@@ -178,7 +169,7 @@ const GALLERY_DATA = [
     title: "COASTAL ROCKS COUTURE",
     creator: "DONNA L. HANSON",
     description: "Modern casual denim and indoor natural luminescence",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@donnalhanson",
     instagramUrl: "https://instagram.com",
     followers: "1.5M",
@@ -196,7 +187,7 @@ const GALLERY_DATA = [
     title: "GOLDEN CORSET CHATEAU",
     creator: "JAMI S. SEAL",
     description: "Golden corset mini dress and private French chateau window suite",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@jamisseal",
     instagramUrl: "https://instagram.com",
     followers: "2.3M",
@@ -214,7 +205,7 @@ const GALLERY_DATA = [
     title: "IVORY CORSET STAIRCASE",
     creator: "JUDITH G. FRANCIS",
     description: "Haute couture white corseted staircase evening gown with high leg slit",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@judithgfrancis",
     instagramUrl: "https://instagram.com",
     followers: "4.5M",
@@ -228,13 +219,12 @@ const GALLERY_DATA = [
     avatar: "assets/images/white-gown.jpg"
   },
 
-  // --- Section 4: Bottom Row / Featured & Recommended (4 cards - User images placed here) ---
   {
     id: 13,
     title: "TURQUOISE TIDES EMERALD",
     creator: "MEGAN C. JOHNSON",
     description: "Crystal clear shallow azure waters with strappy back swimwear",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@megancjohnson",
     instagramUrl: "https://instagram.com",
     followers: "2.9M",
@@ -252,7 +242,7 @@ const GALLERY_DATA = [
     title: "VELVET GLAMOUR WAVES",
     creator: "RUBY J. POINDEXTER",
     description: "High-fashion sultry brunette editorial with cat-eye shades",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@rubyjpoindexter",
     instagramUrl: "https://instagram.com",
     followers: "1.9M",
@@ -270,7 +260,7 @@ const GALLERY_DATA = [
     title: "COASTAL CANYON RETREAT",
     creator: "GLADYS J. FLORES",
     description: "Tropical Seychelles granite beach & straw designer tote",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@gladysjflores",
     instagramUrl: "https://instagram.com",
     followers: "2.6M",
@@ -288,7 +278,7 @@ const GALLERY_DATA = [
     title: "PACIFIC SHORELINE DRIFT",
     creator: "MARTI R. SMITH",
     description: "Relaxed coastal beach vibe with olive cap & twin braids",
-    link: "https://asiafilm.org/4/ce3e0a67e14c175b4c6a3c265a237588",
+    link: "smart link",
     instagram: "@martirsmith",
     instagramUrl: "https://instagram.com",
     followers: "1.8M",
